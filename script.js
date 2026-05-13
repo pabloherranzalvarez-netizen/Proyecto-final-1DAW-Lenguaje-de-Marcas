@@ -1,6 +1,6 @@
-﻿// MENÚ
-var botonMenu = document.getElementById("botonMenu"); // selecciono el botón menú
-var menu = document.getElementById("menu"); // selecciono el nav
+// MENÚ
+var botonMenu = document.getElementById("botonMenu"); // sirve para seleccionar
+var menu = document.getElementById("menu"); 
 
 // addEventListener detecta clicks
 botonMenu.addEventListener("click", function(){
@@ -41,7 +41,6 @@ var formulario = document.getElementById("formulario");
 var resultado = document.getElementById("resultado");
 
 formulario.addEventListener("submit", function(event){
-    // preventDefault evita recargar página
     event.preventDefault();
 
     // parseInt y parseFloat convierten texto a número
@@ -53,7 +52,6 @@ formulario.addEventListener("submit", function(event){
     // validación para evitar negativos o vacío
     if(cantidad <= 0 || isNaN(cantidad)){
 
-        // innerHTML cambia contenido HTML
         resultado.innerHTML =
         "<p class='error'>Introduce una cantidad válida</p>";
     }
@@ -63,7 +61,6 @@ formulario.addEventListener("submit", function(event){
         var iva = subtotal * 0.21; // IVA 21%
         var descuento = 0;
 
-        // toUpperCase pasa texto a mayúsculas
         if(cupon.toUpperCase() == "ZC67"){
             descuento = subtotal * 0.15; // descuento 15%
         }
