@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">  <!--se ven caracteres y tildes correctamente. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!--la etiqueta viewport hace que la página se adapte al tamaño de la pantalla. 
+    El width=device-width, hace que el ancho de la página=ancho del dispositivo. -->
+    <title>ZC-Pablo Herranz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+    <header>
+        <div class="arriba">
+            <h1>ZC</h1>
+            <button id="botonMenu">
+                MENÚ
+            </button>
+        </div>
+        <nav id="menu">  <!--aquí se utiliza nav, para los enlaces a diferentes secciones. -->
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#calculadora">Calculadora</a>
+            <a href="#registro">Registro</a>
+        </nav>
+    </header>
+
+    <!-- INICIO -->
+    <section class="inicio" id="inicio">  
+        <h2>Zapatillas Callejeras</h2>
+        <p>Las mejores zapatillas callejeras. ¡¡¡¡LLeva el flow contigo!!!!</p>
+    </section>
+ <!-- Las imágenes normales del catálogo las puse en HTML con img porque forman parte del contenido de la página, esta imagen principal de inicio, la puse en CSS porque funciona como fondo decorativo de la portada. -->
+    <!-- CATÁLOGO -->
+    <section id="catalogo">
+        <h2>Catálogo</h2>
+        <div class="productos">
+
+            <div class="card"> <!-- Usé div para agrupar los elementos de cada zapatilla. La clase card me permitió aplicar el mismo diseño a todas las tarjetas desde CSS.-->
+                <img src="jordan.jpg" class="zapatilla">
+                <h3>Nike Jordan</h3>
+                <p>160€</p>
+            </div>
+
+            <div class="card">
+                <img src="airforce.jpg" class="zapatilla">
+                <h3>Nike Air Force</h3>
+                <p>120€</p>
+            </div>
+
+            <div class="card">
+                <img src="newbalance740.jpg" class="zapatilla">
+                <h3>New Balance 740</h3>
+                <p>140€</p>
+            </div>
+
+            <div class="card">
+                <img src="campus.jpg" class="zapatilla">
+                <h3>Adidas Campus</h3>
+                <p>100€</p>
+            </div>
+
+            <div class="card">
+                <img src="speedcat.jpg" class="zapatilla">
+                <h3>Puma Speedcat</h3>
+                <p>110€</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VISOR : Creé un visor de imágenes usando un div oculto. Cuando el usuario pulsa una zapatilla, JavaScript cambia el src de una imagen grande y muestra el visor.--> 
+    <div id="visor">
+        <img src="" id="imagenGrande">
+    </div>
+
+    <!-- CALCULADORA -->
+    <section class="calculadora" id="calculadora">
+        <h2>Calculadora de compra</h2>
+        <form id="formulario"> <!-- form, lo utilice en calculadora y regristro para  crear formularios.-->
+
+            <select id="modelo" required> <!-- Usé un select para que el usuario pudiera elegir el modelo de zapatilla. Cada option tiene un value con el precio, que luego JavaScript utiliza para hacer los cálculos
+            Añadí required para obligar a seleccionar un modelo..-->
+                <option value="">Modelo</option>
+                <option value="160">Nike Jordan</option>
+                <option value="120">Nike Air Force</option>
+                <option value="140">New Balance 740</option>
+                <option value="100">Adidas Campus</option>
+                <option value="110">Puma Speedcat</option>
+            </select>
+
+            <input type="number" id="cantidad" placeholder="Cantidad..." required>
+
+            <select id="envio">
+                <option value="0">Recogida gratis</option>
+                <option value="5">Envío estándar</option>
+                <option value="10">Envío premium</option>
+            </select>
+
+            <input type="text" id="cupon" placeholder="Cupón de descuento: ¡Hazte socio abajo para nuevas ofertas!">
+
+            <button type="submit">
+                Calcular
+            </button>
+        </form>
+
+        <div id="resultado"></div>
+    </section>
+
+    <!-- REGISTRO -->
+    <section class="registro" id="registro">
+        <h2>Hazte socio</h2>
+        <p>Recibe ofertas especiales de ZC</p>
+        <form id="formRegistro">
+
+            Nombre:
+            <input type="text" id="nombre" required><br><br> <!--input para que el usuario pueda introducir datos.
+Para nombre text, para email, email y para fecha, fecha(utilizado en apliación del examen 2 eval).-->
+            Email:
+            <input type="email" id="correo" required><br><br>
+
+            Fecha nacimiento:
+            <input type="date" id="fecha" required><br><br>
+
+            <button type="submit">
+                Registrarse
+            </button>
+        </form>
+        <div id="mensajeRegistro"></div>  <!-- Escrito en el JS -->
+    </section>
+
+    <footer>
+        <p>ZC - Lenguaje de marcas - Pablo Herranz Álvarez(ponme un 10!!!)</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

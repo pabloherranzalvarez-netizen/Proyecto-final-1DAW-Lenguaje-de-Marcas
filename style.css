@@ -1,0 +1,222 @@
+*{
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina espacios internos por defecto */
+    box-sizing: border-box; /* Hace que padding y borde se incluyan en el tamaño total */
+}
+
+body{
+    font-family: Arial;
+    background-color: #111; /* Fondo oscuro(los colores los he ido buscando) */
+    color: white;
+}
+
+/* MENÚ */
+header{
+    background-color: black;
+    padding: 20px; /* Espacio interior */
+    text-align: center; /* Centra el texto */
+}
+
+.arriba{
+    display: flex; /* Flex sirve para organizar elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+header h1{
+    color: red;
+}
+
+#botonMenu{
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none; /* Quita el borde típico del botón */
+}
+
+nav{
+    display: none; /* El menú empieza oculto */
+    margin-top: 15px;
+}
+
+nav a{
+    display: block; /* Cada enlace ocupa una línea */
+    color: white;
+    text-decoration: none; /* Quita subrayado */
+    margin-top: 10px;
+}
+
+/* INICIO */
+.inicio{
+    height: 80vh; /* Ocupa gran parte de la pantalla */
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("fondo.jpg");
+
+    /* Usé linear-gradient con rgba para añadir una capa negra semitransparente sobre la imagen de fondo.
+    Así el texto se ve mejor y la portada queda más estética. */
+
+    /* rgba es una forma de crear colores: rojo, verde, azul y transparencia.
+    0,0,0 = negro y 0.5 = transparencia media */
+
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* Centra la imagen */
+
+    display: flex;
+    flex-direction: column; /* Coloca elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.inicio h2{
+    font-size: 50px;
+}
+
+/* CATÁLOGO */
+#catalogo{
+    padding: 40px;
+}
+
+#catalogo h2{
+    text-align: center;
+    color: red;
+    margin-bottom: 30px;
+}
+
+.productos{
+    display: grid; /* Grid sirve para organizar en cuadrícula */
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(200px,1fr));
+
+    /* auto-fit adapta automáticamente las columnas.
+    minmax permite un tamaño mínimo y máximo */
+
+    gap: 20px;
+}
+
+.card{
+    background-color: #1c1c1c;
+    text-align: center;
+}
+
+.card img{
+    width: 100%; /* La imagen ocupa todo el ancho */
+    height: 220px;
+
+    object-fit: cover;
+
+    /* Hace que la imagen se adapte sin deformarse */
+
+    cursor: pointer; /* Cambia el cursor al pasar encima */
+}
+
+.card p{
+    color: red;
+    margin: 10px 0;
+}
+
+/* VISOR */
+#visor{
+    display: none; /* El visor empieza oculto */
+
+    position: fixed;
+
+    /* Fixed hace que quede fijo en pantalla */
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.9);
+
+    text-align: center;
+}
+
+#imagenGrande{
+    width: 80%;
+    max-width: 500px; /* Tamaño máximo */
+    margin-top: 50px;
+}
+
+/* CALCULADORA */
+.calculadora{
+    background-color: #181818;
+    padding: 40px;
+}
+
+.calculadora h2{
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* REGISTRO */
+.registro{
+    background-color: #2a1111; /* Color distinto para diferenciar sección */
+    padding: 40px;
+}
+
+.registro h2{
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.registro p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIOS */
+form{
+    max-width: 400px; /* Anchura máxima */
+    margin: auto; /* Centra el formulario */
+}
+
+input,
+select,
+button{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button{
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+/* RESULTADOS */
+#resultado,
+#mensajeRegistro{
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+
+    background-color: #1c1c1c;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.error{
+    color: red; /* Mensajes de error */
+}
+
+.total{
+    color: red;
+}
+
+/* FOOTER */
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 20px;
+}
