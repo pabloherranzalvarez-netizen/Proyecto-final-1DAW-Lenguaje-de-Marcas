@@ -1,7 +1,7 @@
 *{
     margin: 0; /* Quita los márgenes automáticos */
     padding: 0; /* Esto elimina los espacios internos */
-    box-sizing: border-box; /* Hace que padding y borde se incluyan en el tamaño total */
+    box-sizing: border-box; 
 }
 
 body{
@@ -13,15 +13,15 @@ body{
 /* MENÚ */
 header{
     background-color: black;
-    padding: 20px; /* Espacio interior */
-    text-align: center; /* Centra el texto */
+    padding: 20px; 
+    text-align: center; 
 }
 
 .arriba{
     display: flex; /* Flex sirve para organizar elementos */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    gap: 20px; /* Espacio entre elementos */
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
 }
 
 header h1{
@@ -43,7 +43,7 @@ nav{
 nav a{
     display: block; /* Cada enlace ocupa una línea */
     color: white;
-    text-decoration: none; /* Quita subrayado */
+    text-decoration: none; 
     margin-top: 10px;
 }
 
@@ -59,15 +59,15 @@ nav a{
     Así el texto se ve mejor y la portada queda más estética. */
 
     /* rgba es una forma de crear colores: rojo, verde, azul y transparencia.
-    0,0,0 = negro y 0.5 = transparencia media */
+    0,0,0 = negro y 0.5 = transparencia media (lo tuve que investigar)*/
 
     background-size: cover; /* La imagen cubre toda la sección */
-    background-position: center; /* Centra la imagen */
+    background-position: center; 
 
     display: flex;
-    flex-direction: column; /* Coloca elementos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .inicio h2{
@@ -86,13 +86,10 @@ nav a{
 }
 
 .productos{
-    display: grid; /* Grid sirve para organizar en cuadrícula */
+    display: grid; 
 
     grid-template-columns:
     repeat(auto-fit, minmax(200px,1fr));
-
-    /* auto-fit adapta automáticamente las columnas.
-    minmax permite un tamaño mínimo y máximo */
 
     gap: 20px;
 }
@@ -103,11 +100,10 @@ nav a{
 }
 
 .card img{
-    width: 100%; /* La imagen ocupa todo el ancho */
+    width: 100%;
     height: 220px;
 
     object-fit: cover;
-
     /* Hace que la imagen se adapte sin deformarse */
 
     cursor: pointer; /* Cambia el cursor al pasar encima */
@@ -123,23 +119,17 @@ nav a{
     display: none; /* El visor empieza oculto */
 
     position: fixed;
-
-    /* Fixed hace que quede fijo en pantalla */
-
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     background-color: rgba(0,0,0,0.9);
-
     text-align: center;
 }
 
 #imagenGrande{
     width: 80%;
-    max-width: 500px; /* Tamaño máximo */
+    max-width: 500px; 
     margin-top: 50px;
 }
 
@@ -174,8 +164,8 @@ nav a{
 
 /* FORMULARIOS */
 form{
-    max-width: 400px; /* Anchura máxima */
-    margin: auto; /* Centra el formulario */
+    max-width: 400px; 
+    margin: auto; 
 }
 
 input,
