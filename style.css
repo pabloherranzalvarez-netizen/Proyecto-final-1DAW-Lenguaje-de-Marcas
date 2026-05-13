@@ -1,6 +1,6 @@
 *{
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina espacios internos por defecto */
+    margin: 0; /* Quita los márgenes automáticos */
+    padding: 0; /* Esto elimina los espacios internos */
     box-sizing: border-box; /* Hace que padding y borde se incluyan en el tamaño total */
 }
 
